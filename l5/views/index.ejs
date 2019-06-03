@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form method="POST" enctype="application/x-www-form-urlencoded">
+        <div>
+            Imię:
+            <input type='text' name='name' />
+            <br />
+            Nazwisko:
+            <input type='text' name='surname' />
+            <br />
+            Przedmiot:
+            <input type='text' name='subject' />
+            <br />
+            <table style="width:50%">
+                <tr>
+                    <% for ( var i=1; i <= 10; i++ ) { %>
+                    <td>
+                        <%=i %>
+                    </td>
+                    <% } %>
+                </tr>
+                <tr>
+                    <% for ( var i=1; i <= 10; i++ ) { %>
+                    <td>
+                        <input type='text' name='zad<%= i %>' />
+                    </td>
+                    <% } %>
+                </tr>
+            </table>
+            <button>Prześlij</button>
+        </div>
+    </form>
+</body>
+
+</html>
